@@ -27,7 +27,7 @@ def post_list(request):
 
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post,
-                             status=Post.PUBLISHED,
+                             status=Post.Status.PUBLISHED,
                              slug=post,
                              publish__year=year,
                              publish__month=month,
@@ -56,7 +56,8 @@ class PostListView(ListView):
 
 def post_share(request, post_id):
     # Retrieve post by id
-    post = get_object_or_404(Post, id=post_id, status=Post.PUBLISHED)
+    post = get_object_or_404(Post, id=post_id, \
+                                   status=Post.Status.PUBLISHED)
     sent = False
 
     if request.method == 'POST':
@@ -83,7 +84,8 @@ def post_share(request, post_id):
 
 @require_POST
 def post_comment(request, post_id):
-    post = get_object_or_404(Post, id=post_id, status=Post.PUBLISHED)
+    post = get_object_or_404(Post, id=post_id, \
+                                   status=Post.Status.PUBLISHED)
     comment = None
     # A comment was posted
     form = CommentForm(data=request.POST)
