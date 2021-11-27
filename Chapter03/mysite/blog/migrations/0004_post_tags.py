@@ -8,7 +8,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('taggit', '0003_taggeditem_add_unique_index'),
-        ('blog', '0003_comment'),
+        ('blog', '0003_comment_comment_blog_commen_created_0e6ed4_idx'),
     ]
 
     operations = [
