@@ -1,0 +1,53 @@
+#bookmarklet {
+    background:#fff;
+    border-bottom:8px solid #12c064;
+    font-family:"Helvetica Neue", helvetica, arial, sans-serif !important;
+    padding:10px; overflow:auto;
+    box-shadow:0px 0px 8px 0 #666;
+    position:fixed;
+    width:400px;
+    min-height:200px;
+    top:10px;
+    right:10px;
+    z-index:1000000000000;
+}
+
+#bookmarklet h1{ 
+    font-family:"Helvetica Neue", helvetica, arial, sans-serif;
+    font-weight:normal;
+    color:#333;
+    font-size:18px;
+    padding:4px 0 20px 0;
+ }
+ 
+#bookmarklet #close { 
+    float:right;
+    font-size:18px;
+    text-decoration:none;
+    color:#666;
+    margin-top:-6px; 
+}
+
+#bookmarklet #close:hover { 
+    color:#000;
+}
+
+#bookmarklet .images {
+    margin-bottom:20px;
+    overflow:auto;
+}
+
+#bookmarklet .images img {
+    border:1px solid #ccc;
+    padding:2px;
+    margin:2px;
+    opacity:0.8;
+    width:90px;
+    float:left;
+}
+
+#bookmarklet .images img.selected,
+#bookmarklet .images img:hover { 
+    border:1px solid #12c064;
+    opacity:1; 
+}
