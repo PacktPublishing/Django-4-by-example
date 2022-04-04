@@ -1,6 +1,6 @@
 asgiref==3.5.0
 Django==4.0.3
-Pillow==9.0.1
+Pillow==9.1.0
 sqlparse==0.4.2
 social-auth-app-django==5.0.0
 django-extensions==3.1.5
@@ -9,4 +9,4 @@ pyOpenSSL==22.0.0
 requests==2.27.1
 easy-thumbnails==2.8.1
 django-debug-toolbar==3.2.4
-redis==4.1.4
+redis==4.2.1

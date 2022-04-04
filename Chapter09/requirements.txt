@@ -1,7 +1,7 @@
 asgiref==3.5.0
 Django==4.0.3
 sqlparse==0.4.2
-Pillow==9.0.1
+Pillow==9.1.0
 flower==1.0.0
 celery==5.2.3
 stripe==2.68.0
