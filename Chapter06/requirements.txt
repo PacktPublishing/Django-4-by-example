@@ -4,7 +4,7 @@ Pillow==9.1.0
 sqlparse==0.4.2
 social-auth-app-django==5.0.0
 django-extensions==3.1.5
-werkzeug==2.0.3
+werkzeug==2.1.1
 pyOpenSSL==22.0.0
 requests==2.27.1
 easy-thumbnails==2.8.1

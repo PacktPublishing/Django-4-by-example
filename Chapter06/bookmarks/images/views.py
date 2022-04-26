@@ -7,7 +7,6 @@ from django.views.decorators.http import require_POST
 from django.http import HttpResponse
 from django.core.paginator import Paginator, EmptyPage, \
                                   PageNotAnInteger
-from common.decorators import ajax_required, is_ajax
 from .forms import ImageCreateForm
 from .models import Image
 
@@ -44,7 +43,6 @@ def image_detail(request, id, slug):
                    'image': image})
 
 
-@ajax_required
 @login_required
 @require_POST
 def image_like(request):
@@ -57,10 +55,10 @@ def image_like(request):
                 image.users_like.add(request.user)
             else:
                 image.users_like.remove(request.user)
-            return JsonResponse({'status':'ok'})
+            return JsonResponse({'status': 'ok'})
         except:
             pass
-    return JsonResponse({'status':'error'})
+    return JsonResponse({'status': 'error'})
 
 
 @login_required
@@ -68,21 +66,22 @@ def image_list(request):
     images = Image.objects.all()
     paginator = Paginator(images, 8)
     page = request.GET.get('page')
+    images_only = request.GET.get('images_only')
     try:
         images = paginator.page(page)
     except PageNotAnInteger:
         # If page is not an integer deliver the first page
         images = paginator.page(1)
     except EmptyPage:
-        if is_ajax(request):
-            # If the request is AJAX and the page is out of range
+        if images_only:
+            # If AJAX request and page out of range
             # return an empty page
             return HttpResponse('')
-        # If page is out of range deliver last page of results
+        # If page out of range return last page of results
         images = paginator.page(paginator.num_pages)
-    if is_ajax(request):
+    if images_only:
         return render(request,
-                      'images/image/list_ajax.html',
+                      'images/image/list_images.html',
                       {'section': 'images',
                        'images': images})
     return render(request,
