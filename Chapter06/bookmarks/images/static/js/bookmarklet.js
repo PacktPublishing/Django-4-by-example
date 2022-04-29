@@ -33,10 +33,8 @@ function bookmarkletLaunch() {
   // close event
   bookmarklet.querySelector('#close')
              .addEventListener('click', function(){
-               bookmarklet.style.display = 'none'
-             });
-
-
+    bookmarklet.style.display = 'none'
+  });
 }
 
 // launch the bookmkarklet
