@@ -21,35 +21,48 @@
       {% endif %}
     </a>
     <div id="image-list" class="image-container">
-      {% include "images/image/list_ajax.html" with images=user.images_created.all %}
+      {% include "images/image/list_images.html" with images=user.images_created.all %}
     </div>
   {% endwith %}
 {% endblock %}
 
 {% block domready %}
-  $('a.follow').click(function(e){
+  var url = '{% url "user_follow" %}';
+  var options = {
+    method: 'POST',
+    headers: {'X-CSRFToken': csrftoken},
+    mode: 'same-origin'
+  }
+
+  document.querySelector('a.follow')
+          .addEventListener('click', function(e){
     e.preventDefault();
-    $.post('{% url "user_follow" %}',
+    var followButton = this;
+
+    // add request body
+    var formData = new FormData();
+    formData.append('id', followButton.dataset.id);
+    formData.append('action', followButton.dataset.action);
+    options['body'] = formData;
+
+    // send HTTP request
+    fetch(url, options)
+    .then(response => response.json())
+    .then(data => {
+      if (data['status'] === 'ok')
       {
-        id: $(this).data('id'),
-        action: $(this).data('action')
-      },
-      function(data){
-        if (data['status'] == 'ok') {
-          var previous_action = $('a.follow').data('action');
-          // toggle data-action
-          $('a.follow').data('action',
-            previous_action == 'follow' ? 'unfollow' : 'follow');
-          // toggle link text
-          $('a.follow').text(
-            previous_action == 'follow' ? 'Unfollow' : 'Follow');
-          // update total followers
-          var previous_followers = parseInt(
-            $('span.count .total').text());
-          $('span.count .total').text(previous_action == 'follow' ?
-          previous_followers + 1 : previous_followers - 1);
-        }
+        var previousAction = followButton.dataset.action;
+
+        // toggle button text and data-action
+        var action = previousAction === 'follow' ? 'unfollow' : 'follow';
+        followButton.dataset.action = action;
+        followButton.innerHTML = action;
+
+        // update follower count
+        var followerCount = document.querySelector('span.count .total');
+        var totalFollowers = parseInt(followerCount.innerHTML);
+        followerCount.innerHTML = previousAction === 'follow' ? totalFollowers + 1 : totalFollowers - 1;
       }
-    );
+    })
   });
 {% endblock %}

@@ -45,29 +45,42 @@
 {% endblock %}
 
 {% block domready %}
-  $('a.like').click(function(e){
+  var url = '{% url "images:like" %}';
+  var options = {
+    method: 'POST',
+    headers: {'X-CSRFToken': csrftoken},
+    mode: 'same-origin'
+  }
+
+  document.querySelector('a.like')
+          .addEventListener('click', function(e){
     e.preventDefault();
-    $.post('{% url "images:like" %}',
+    var likeButton = this;
+
+    // add request body
+    var formData = new FormData();
+    formData.append('id', likeButton.dataset.id);
+    formData.append('action', likeButton.dataset.action);
+    options['body'] = formData;
+
+    // send HTTP request
+    fetch(url, options)
+    .then(response => response.json())
+    .then(data => {
+      if (data['status'] === 'ok')
       {
-        id: $(this).data('id'),
-        action: $(this).data('action')
-      },
-      function(data){
-        if (data['status'] == 'ok')
-        {
-          var previous_action = $('a.like').data('action');
-          // toggle data-action
-          $('a.like').data('action', previous_action == 'like' ?
-          'unlike' : 'like');
-          // toggle link text
-          $('a.like').text(previous_action == 'like' ? 'Unlike' :
-          'Like');
-          // update total likes
-          var previous_likes = parseInt($('span.count .total').text());
-          $('span.count .total').text(previous_action == 'like' ?
-          previous_likes + 1 : previous_likes - 1);
-        }
+        var previousAction = likeButton.dataset.action;
+
+        // toggle button text and data-action
+        var action = previousAction === 'like' ? 'unlike' : 'like';
+        likeButton.dataset.action = action;
+        likeButton.innerHTML = action;
+
+        // update like count
+        var likeCount = document.querySelector('span.count .total');
+        var totalLikes = parseInt(likeCount.innerHTML);
+        likeCount.innerHTML = previousAction === 'like' ? totalLikes + 1 : totalLikes - 1;
       }
-    );
+    })
   });
 {% endblock %}

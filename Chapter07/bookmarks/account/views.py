@@ -7,7 +7,6 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from common.decorators import ajax_required
 from .forms import LoginForm, UserRegistrationForm, \
                    UserEditForm, ProfileEditForm
 from .models import Profile
@@ -125,7 +124,6 @@ def user_detail(request, username):
                    'user': user})
 
 
-@ajax_required
 @require_POST
 @login_required
 def user_follow(request):
@@ -142,7 +140,7 @@ def user_follow(request):
             else:
                 Contact.objects.filter(user_from=request.user,
                                        user_to=user).delete()
-            return JsonResponse({'status':'ok'})
+            return JsonResponse({'status': 'ok'})
         except User.DoesNotExist:
-            return JsonResponse({'status':'error'})
-    return JsonResponse({'status':'error'})
+            return JsonResponse({'status': 'error'})
+    return JsonResponse({'status': 'error'})
