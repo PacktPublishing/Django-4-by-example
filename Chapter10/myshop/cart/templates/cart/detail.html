@@ -1,0 +1,104 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+  Your shopping cart
+{% endblock %}
+
+{% block content %}
+  <h1>Your shopping cart</h1>
+  <table class="cart">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Remove</th>
+        <th>Unit price</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in cart %}
+        {% with product=item.product %}
+          <tr>
+            <td>
+              <a href="{{ product.get_absolute_url }}">
+                <img src="{% if product.image %}{{ product.image.url }}
+                {% else %}{% static "img/no_image.png" %}{% endif %}">
+              </a>
+            </td>
+            <td>{{ product.name }}</td>
+            <td>
+              <form action="{% url "cart:cart_add" product.id %}" method="post">
+                {{ item.update_quantity_form.quantity }}
+                {{ item.update_quantity_form.override }}
+                <input type="submit" value="Update">
+                {% csrf_token %}
+              </form>
+            </td>
+            <td>
+              <form action="{% url "cart:cart_remove" product.id %}" method="post">
+                <input type="submit" value="Remove">
+                {% csrf_token %}
+              </form>
+            </td>
+            <td class="num">${{ item.price }}</td>
+            <td class="num">${{ item.total_price }}</td>
+          </tr>
+        {% endwith %}
+      {% endfor %}
+      {% if cart.coupon %}
+        <tr class="subtotal">
+          <td>Subtotal</td>
+          <td colspan="4"></td>
+          <td class="num">${{ cart.get_total_price|floatformat:2 }}</td>
+        </tr>
+        <tr>
+          <td>
+            "{{ cart.coupon.code }}" coupon
+            ({{ cart.coupon.discount }}% off)
+          </td>
+          <td colspan="4"></td>
+          <td class="num neg">
+            - ${{ cart.get_discount|floatformat:2 }}
+          </td>
+        </tr>
+      {% endif %}
+      <tr class="total">
+        <td>Total</td>
+        <td colspan="4"></td>
+        <td class="num">
+          ${{ cart.get_total_price_after_discount|floatformat:2 }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  {% if recommended_products %}
+  <div class="recommendations cart">
+    <h3>People who bought this also bought</h3>
+    {% for p in recommended_products %}
+      <div class="item">
+        <a href="{{ p.get_absolute_url }}">
+          <img src="{% if p.image %}{{ p.image.url }}{% else %}
+          {% static "img/no_image.png" %}{% endif %}">
+        </a>
+        <p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+  <p>Apply a coupon:</p>
+  <form action="{% url "coupons:apply" %}" method="post">
+    {{ coupon_apply_form }}
+    <input type="submit" value="Apply">
+    {% csrf_token %}
+  </form>
+  <p class="text-right">
+    <a href="{% url "shop:product_list" %}" class="button
+    light">Continue shopping</a>
+    <a href="{% url "orders:order_create" %}" class="button">Checkout</a>
+  </p>
+{% endblock %}
