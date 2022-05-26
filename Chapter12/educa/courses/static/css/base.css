@@ -106,6 +106,13 @@ h1 {
     background:#3f3f3f;
 }
 
+.contents ul li.placeholder {
+  background: #333;
+  border:1px dashed #ccc;
+  padding:0;
+  margin:10px 0;
+}
+
 .contents ul span {
     text-transform:uppercase;
     color:#bbb;
@@ -204,6 +211,7 @@ ul#course-modules li {
     padding:20px;
     overflow:auto;
     cursor:move;
+    user-select:none;
 }
 
 ul#course-modules li:nth-child(even) {
@@ -218,6 +226,10 @@ ul#course-modules li:hover {
     padding:10px 20px;
     border:1px solid #ccc;
     background:#fff
+}
+
+#module-contents div.placeholder {
+  border:1px dashed #ccc;
 }
 
 #module-contents form {
