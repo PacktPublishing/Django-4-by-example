@@ -47,11 +47,11 @@ class Module(models.Model):
     description = models.TextField(blank=True)
     order = OrderField(blank=True, for_fields=['course'])
 
-    def __str__(self):
-        return f'{self.order}. {self.title}'
-
     class Meta:
         ordering = ['order']
+
+    def __str__(self):
+        return f'{self.order}. {self.title}'
 
 
 class Content(models.Model):
