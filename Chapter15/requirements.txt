@@ -1,0 +1,10 @@
+asgiref==3.5.1
+Django==4.0.4
+Pillow==9.1.1
+sqlparse==0.4.2
+django-braces==1.15.0
+pymemcache==3.5.2
+django-debug-toolbar==3.4.0
+redis==4.3.1
+djangorestframework==3.13.1
+requests==2.27.1
