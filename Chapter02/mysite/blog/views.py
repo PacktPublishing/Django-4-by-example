@@ -10,7 +10,8 @@ from django.views.decorators.http import require_POST
 
 def post_list(request):
     post_list = Post.published.all()
-    paginator = Paginator(post_list, 3) # 3 posts per page
+    # Pagination with 3 posts per page
+    paginator = Paginator(post_list, 3)
     page_number = request.GET.get('page', 1)
     try:
         posts = paginator.page(page_number)
@@ -71,7 +72,7 @@ def post_share(request, post_id):
                       f"{post.title}"
             message = f"Read {post.title} at {post_url}\n\n" \
                       f"{cd['name']}\'s comments: {cd['comments']}"
-            send_mail(subject, message, 'antonio.mele@gmail.com',
+            send_mail(subject, message, 'your_account@gmail.com',
                       [cd['to']])
             sent = True
 

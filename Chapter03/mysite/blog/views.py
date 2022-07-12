@@ -19,8 +19,8 @@ def post_list(request, tag_slug=None):
     if tag_slug:
         tag = get_object_or_404(Tag, slug=tag_slug)
         post_list = post_list.filter(tags__in=[tag])
-
-    paginator = Paginator(post_list, 3) # 3 posts per page
+    # Pagination with 3 posts per page
+    paginator = Paginator(post_list, 3)
     page_number = request.GET.get('page', 1)
     try:
         posts = paginator.page(page_number)
@@ -91,7 +91,7 @@ def post_share(request, post_id):
                       f"{post.title}"
             message = f"Read {post.title} at {post_url}\n\n" \
                       f"{cd['name']}\'s comments: {cd['comments']}"
-            send_mail(subject, message, 'antonio.mele@gmail.com',
+            send_mail(subject, message, 'your_account@gmail.com',
                       [cd['to']])
             sent = True
 
