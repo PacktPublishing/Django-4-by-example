@@ -38,8 +38,12 @@ def cart_detail(request):
 
     r = Recommender()
     cart_products = [item['product'] for item in cart]
-    recommended_products = r.suggest_products_for(cart_products,
-                                                  max_results=4)
+    if(cart_products):
+        recommended_products = r.suggest_products_for(cart_products,
+                                                      max_results=4)
+    else:
+        recommended_products = []
+
     return render(request,
                   'cart/detail.html',
                   {'cart': cart,

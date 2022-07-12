@@ -40,7 +40,7 @@ def cart_detail(request):
     cart_products = [item['product'] for item in cart]
     if(cart_products):
         recommended_products = r.suggest_products_for(cart_products,
-                                                    max_results=4)
+                                                      max_results=4)
     else:
         recommended_products = []
 
