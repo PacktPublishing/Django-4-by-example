@@ -4,8 +4,7 @@ from shop.models import Product
 from coupons.models import Coupon
 
 
-class Cart():
-
+class Cart:
     def __init__(self, request):
         """
         Initialize the cart.
