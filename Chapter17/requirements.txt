@@ -11,3 +11,5 @@ django-redisboard==8.3.0
 djangorestframework==3.13.1
 requests==2.28.1
 channels==3.0.5
+psycopg2==2.9.3
+uwsgi==2.0.20

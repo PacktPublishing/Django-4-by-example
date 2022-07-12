@@ -1,6 +1,6 @@
-asgiref==3.5.1
-Django==4.0.4
+asgiref==3.5.2
+Django==4.0.6
 sqlparse==0.4.2
-Pillow==9.1.0
-flower==1.0.0
-celery==5.2.6
+Pillow==9.2.0
+flower==1.1.0
+celery==5.2.7
