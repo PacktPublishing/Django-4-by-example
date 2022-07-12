@@ -27,7 +27,7 @@
 {% endblock %}
 
 {% block domready %}
-  var url = '{% url "user_follow" %}';
+  const url = '{% url "user_follow" %}';
   var options = {
     method: 'POST',
     headers: {'X-CSRFToken': csrftoken},
