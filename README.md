@@ -14,3 +14,6 @@ Where there are interim files for the chapter, you can find those files in the
 Since bold text doesn't apply well in code files, I have tried to mark changed 
    lines with a comment. Where an entire block is new or changed, there is a 
    hashtag on the line following the end of changed lines.
+
+Filenames like `filename_00.py` are the auto-generated files before any edits 
+   are applied, they exist for informational purposes only.
