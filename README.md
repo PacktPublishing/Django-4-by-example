@@ -1,11 +1,14 @@
-
 # Django 4 by Example
 
 [![GitHub stars](https://img.shields.io/github/stars/PacktPublishing/Django-4-by-example)](https://github.com/PacktPublishing/Django-4-by-example/stargazers)
 
-This is the code repository for [Django 4 by Example](https://djangobyexample.com/), written by [Antonio Melé](https://antoniomele.es/) and published by [Packt](https://www.packtpub.com/product/django-3-by-example-third-edition/9781838981952). It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for [Django 4 by Example](https://djangobyexample.com/), written by [Antonio Melé](https://antoniomele.es/) and published by [Packt](https://www.packtpub.com/product/django-4-by-example/9781801813051). It contains all the supporting project files necessary to work through the book from start to finish.
 
-[<img src="https://djangobyexample.com/static/v4/img/django_by_example_4_cover.png" style="width:200px; float:left;">](https://djangobyexample.com/)
+[<img src="https://djangobyexample.com/static/v4/img/django_by_example_4_cover.png" style="width:200px;">](https://djangobyexample.com/)
+
+## Instructions
+All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
+
 
 ## About the Book
 
@@ -19,13 +22,13 @@ After reading this book, you will have a good understanding of how Django works 
 
 You’ll cover a wide range of web app development topics as you build four different apps:
 
-- **Blog Application**: Create data models, views, and URLs and implement an admin site for your blog. Create sitemaps and RSS feeds and implement a full-text search engine with PostgreSQL.
+- **Blog Application**: Create a complete blog application using Django. Create data models, views, and URLs and implement an admin site for your blog. Create sitemaps and RSS feeds and implement a full-text search engine with PostgreSQL. Build a tagging system using [django-taggit](https://github.com/jazzband/django-taggit).
 
-- **Social Website**: Implement authentication with Facebook, Twitter, and Google. Create user profiles, image thumbnails, build a bookmarklet, create an activity stream, implement a user follow system and add infinite scroll pagination.
+- **Social Website**: Implement authentication with Facebook, Twitter, and Google using [Python Social Auth](https://github.com/python-social-auth/social-app-django). Create user profiles, image thumbnails with [easy-thumbnails](https://github.com/SmileyChris/easy-thumbnails), build a JavaScript bookmarklet, create an activity stream, implement a user follow system and add infinite scroll pagination using Django and JavaScript.
 
-- **Ecommerce Application**: Build a product catalog, a shopping cart, and asynchronous tasks with Celery and RabbitMQ. Process payments with [Stripe](https://stripe.com/) and manage payment notifications via webhooks. Generate PDF invoices and export orders to CSV.
+- **Ecommerce Application**: Build a product catalog, a shopping cart, and asynchronous tasks with [Celery](https://docs.celeryq.dev/) and [RabbitMQ](https://www.rabbitmq.com/). Process payments with [Stripe](https://stripe.com/) and manage payment notifications via webhooks. Generate PDF invoices using [Weasyprint](https://weasyprint.org/) and export orders to CSV.
 
-- **eLearning Platform**: Create a content management system that manages users, groups, and permissions. Build a REST API using Django REST Framework and implement a real-time chat using WebSockets and Django Channels. Create a production environment using Docker Compose, Nginx, uWSGI and Daphne.
+- **eLearning Platform**: Create a content management system that manages users, groups, and permissions. Build a REST API using [Django REST Framework](https://www.django-rest-framework.org/) and implement a real-time chat using WebSockets and Django Channels. Create a production environment using [Docker Compose](https://docs.docker.com/compose/), [Nginx](https://www.nginx.com/), [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) and [Daphne](https://github.com/django/daphne).
 
 ## Code Snippets for Intermediate Steps
 [Work in progress] Main Chapter folders contain only the finished code for each chapter. Additional folders contain the files as they appear for a
@@ -39,7 +42,7 @@ Filenames like `filename_00.py` are the auto-generated files before any edits ar
 
 ## Community & Support
 
-Join the book [Discord Server](https://discord.gg/PQ7UYX9VTx) to participate in the ongoing discussions or/and initiate a new one. You will find other developers reading the book alongside and helping each other with questions.
+Join the book [Discord Community](https://discord.gg/PQ7UYX9VTx) to participate in the ongoing discussions or/and initiate a new one. You will find other developers reading the book alongside and helping each other with questions.
 
 ## Source Code for Previous Editions
 - [Django 3 by Example](https://github.com/PacktPublishing/Django-3-by-Example)
