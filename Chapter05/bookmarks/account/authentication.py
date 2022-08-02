@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from account.models import Profile
 
 
-class EmailAuthBackend():
+class EmailAuthBackend:
     """
     Authenticate using an e-mail address.
     """
@@ -22,9 +22,8 @@ class EmailAuthBackend():
             return None
 
 
-def create_profile(backend, user=None, *args, **kwargs):
+def create_profile(backend, user, *args, **kwargs):
     """
     Create user profile for social authentication
     """
-    if user:
-        profile = Profile.objects.get_or_create(user=user)
+    profile = Profile.objects.get_or_create(user=user)
