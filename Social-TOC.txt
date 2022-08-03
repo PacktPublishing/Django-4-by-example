@@ -18,3 +18,27 @@
           Chapter04/bookmarks/account/templates/account/login.html
       02 Using Django authentication views
       03 Login and logout views
+         ch04/02.03/account/urls_01.py
+         ch04/02.03/account/templates/registration/login_01.html
+         Chapter04/bookmarks/account/templates/registration/logged_out.html
+         ch04/02.03/account/views_01.py
+         ch04/02.03/account/templates/account/dashboard_01.html
+         ch04/02.03/account/urls_02.py
+         ch04/02.03/bookmarks/settings_01.py
+         ch04/02.03/account/templates/base_01.html
+      04 Change password views
+         ch04/02.04/account/urls_01.py
+         Chapter04/bookmarks/account/templates/registration/password_change_form.html
+         Chapter04/bookmarks/account/templates/registration/password_change_form.html
+      05 Reset password views
+         ch04/02.05/account/urls_01.py
+         Chapter04/bookmarks/account/templates/registration/password_reset_form.html
+         Chapter04/bookmarks/account/templates/registration/password_reset_email.html
+         Chapter04/bookmarks/account/templates/registration/password_reset_done.html
+         Chapter04/bookmarks/account/templates/registration/password_reset_confirm.html
+         Chapter04/bookmarks/account/templates/registration/password_reset_complete.html
+         ch04/02.05/account/templates/registration/login_01.html
+         ch04/02.05/bookmarks/settings_01.py
+         ch04/02.05/account/urls_02.py
+   03 User registration and user profiles
+      01 User registration
