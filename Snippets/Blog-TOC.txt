@@ -70,3 +70,63 @@
    13 The request/response cycle
    14 Additional resources
    15 Summary
+02 Enhancing Your Blog with Advanced Features
+   01 Using canonical URLs for models
+      ch02/01/blog/models_01.py
+      ch02/01/blog/templates/blog/post/list_01.html
+   02 Creating SEO-friendly URLs for posts
+      ch02/02/blog/models_01.py
+   03 Modifying the URL patterns
+      ch02/03/blog/urls_01.py
+   04 Modifying the views
+      ch02/04/blog/views_01.py
+      01 Modifying the canonical URL for posts
+         ch02/04.01/blog/models_01.py
+   05 Adding pagination
+      01 Adding pagination to the post list view
+         ch02/05.01/blog/views_01.py
+      02 Creating a pagination template
+         Chapter02/mysite/blog/templates/pagination.html
+         ch02/05.02/blog/templates/blog/post/list_01.html
+      03 Handling pagination errors
+         ch02/05.03/blog/views_01.py
+         ch02/05.03/blog/views_02.py
+   06 Building class-based views
+      01 Why use class-based views
+      02 Using a class-based view to list posts
+         ch02/06.02/blog/views_01.py
+         ch02/06.02/blog/urls_01.py
+         Chapter02/mysite/blog/templates/blog/post/list.html
+   07 Recommending posts by email
+      01 Creating forms with Django
+         ch02/07.01/blog/forms_01.py
+      02 Handling forms in views
+         ch02/07.02/blog/views_01.py
+      03 Sending emails with Django
+         Chapter02/mysite/mysite/settings.py
+      04 Sending emails in views
+         ch02/07.04/blog/views_01.py
+         ch02/07.04/blog/urls_01.py
+      05 Rendering forms in templates
+         Chapter02/mysite/blog/templates/blog/post/share.html
+         ch02/07.05/blog/templates/blog/post/detail_01.html
+   08 Creating a comment system
+      01 Creating a model for comments
+         Chapter02/mysite/blog/models.py
+      02 Adding comments to the administration site
+         Chapter02/mysite/blog/admin.py
+      03 Creating forms from models
+         Chapter02/mysite/blog/forms.py
+      04 Handling ModelForms in views
+         ch02/08.04/blog/views_01.py
+         Chapter02/mysite/blog/urls.py
+      05 Creating templates for the comment form
+         Chapter02/mysite/blog/templates/blog/post/includes/comment_form.html
+         Chapter02/mysite/blog/templates/blog/post/comment.html
+      06 Adding comments to the post detail view
+         Chapter02/mysite/blog/views.py
+      07 Adding comments to the post detail template
+         ch02/08.07/blog/templates/blog/post/detail_01.html
+         Chapter02/mysite/blog/templates/blog/post/detail.html
+   09 Additional resources
+   10 Summary
