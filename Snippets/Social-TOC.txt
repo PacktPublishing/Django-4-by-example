@@ -1,0 +1,20 @@
+04 Building a Social Website
+   01 Creating a social website project
+      01 Starting the social website project
+          ch04/01.01/bookmarks/settings_00.py
+          ch04/01.01/bookmarks/urls_00.py
+          ch04/01.01/account/admin_00.py
+          ch04/01.01/account/models_00.py
+          ch04/01.01/account/views_00.py
+          ch04/01.01/bookmarks/settings_01.py
+   02 Using the Django authentication framework
+      01 Creating a login view
+          ch04/02.01/account/forms_01.py
+          ch04/02.01/account/views_01.py
+          ch04/02.01/account/urls_01.py
+          ch04/02.01/bookmarks/urls_01.py
+          Chapter04/bookmarks/account/static/css/base.css
+          ch04/02.01/account/templates/base_01.html
+          Chapter04/bookmarks/account/templates/account/login.html
+      02 Using Django authentication views
+      03 Login and logout views
