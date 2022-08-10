@@ -1,0 +1,2 @@
+{% load embed_video_tags %}
+{% video item.url "small" %}

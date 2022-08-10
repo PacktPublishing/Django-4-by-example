@@ -1,5 +1,5 @@
 asgiref==3.5.2
-Django==4.0.6
+Django~=4.0
 Pillow==9.2.0
 sqlparse==0.4.2
 django-braces==1.15.0
@@ -11,5 +11,7 @@ django-redisboard==8.3.0
 djangorestframework==3.13.1
 requests==2.28.1
 channels==3.0.5
+channels-redis==3.4.1
 psycopg2==2.9.3
 uwsgi==2.0.20
+daphne==3.0.2

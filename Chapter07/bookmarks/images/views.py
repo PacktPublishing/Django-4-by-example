@@ -72,7 +72,7 @@ def image_like(request):
             else:
                 image.users_like.remove(request.user)
             return JsonResponse({'status': 'ok'})
-        except:
+        except Image.DoesNotExist:
             pass
     return JsonResponse({'status': 'error'})
 

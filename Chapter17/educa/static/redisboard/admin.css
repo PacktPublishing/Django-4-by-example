@@ -1,0 +1,108 @@
+#content-main {
+    min-width: 980px;
+    margin: 0 auto;
+    float: none;
+}
+
+table {
+    width: 100%;
+}
+
+.key-details td:first-child {
+    width: 60%;
+    text-align: left;
+}
+
+.server-status td {
+    text-align: center;
+}
+
+.key td:nth-child(n+2) {
+    text-align: center;
+}
+
+.key-details th,
+.key-details td {
+    text-align: center;
+}
+
+.key-data td {
+    text-align: left;
+}
+
+table table tr:hover *,
+.key-details tr:hover td,
+.key-data tr:hover td {
+    background: var(--selected-row);
+}
+
+.key-data td:nth-child(2) {
+    font-family: monospace;
+    width: 99%;
+}
+
+.details td {
+    width: 50%;
+    word-break: break-all;
+}
+
+.key-data td:nth-child(2) {
+    word-break: break-all;
+}
+
+td.error {
+    font-weight: bold;
+    color: #B22222;
+}
+
+table table tr {
+    background: transparent !important;
+}
+
+table table th {
+    padding-right: 0 !important;
+}
+
+table table tr:last-of-type th,
+table table tr:last-of-type td {
+    border-bottom: none;
+}
+
+table table table {
+    border-bottom: none;
+}
+
+table table td {
+    text-align: center;
+}
+
+table table td,
+table table th {
+    padding: 5px;
+}
+
+table table td[colspan] {
+    padding: 0;
+}
+
+table .field-slowlog th,
+table .field-slowlog td {
+    width: min-content !important;
+    text-align: left;
+}
+
+.server-status thead th,
+.key-details table th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+table table table th:nth-child(n+2) {
+    text-align: center;
+    width: 25%;
+}
+
+p {
+    box-sizing: border-box;
+
+}
