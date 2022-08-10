@@ -130,3 +130,64 @@
          Chapter02/mysite/blog/templates/blog/post/detail.html
    09 Additional resources
    10 Summary
+03 Extending Your Blog Application
+   01 Adding the tagging functionality
+      ch03/01/mysite/settings_01.py
+      Chapter03/mysite/blog/models.py
+      ch03/01/blog/templates/blog/post/list_01.html
+      ch03/01/blog/views_01.py
+      ch03/01/blog/urls_01.py
+      ch03/01/blog/templates/blog/post/list_02.html
+      ch03/01/blog/templates/blog/post/list_03.html
+   02 Retrieving posts by similarity
+      ch03/02/blog/views_01.py
+      ch03/02/blog/views_02.py
+      ch03/02/blog/templates/blog/post/detail_01.html
+   03 Creating custom template tags and filters
+      01 Implementing custom template tags
+      02 Creating a simple template tag
+         ch03/03.02/blog/templatetags/blog_tags_01.py
+         ch03/03.02/blog/templates/blog/base_01.html
+      03 Creating an inclusion template tag
+         ch03/03.03/blog/templatetags/blog_tags_01.py
+         Chapter03/mysite/blog/templates/blog/post/latest_posts.html
+         ch03/03.03/blog/templates/blog/base_01.html
+      04 Creating a template tag that returns a QuerySet
+         ch03/03.04/blog/templatetags/blog_tags_01.py
+         ch03/03.04/blog/templates/blog/base_01.html
+      05 Implementing custom template filters
+      06 Creating a template filter to support markdown syntax
+         Chapter03/mysite/blog/templatetags/blog_tags.py
+         Chapter03/mysite/blog/templates/blog/post/detail.html
+         Chapter03/mysite/blog/templates/blog/post/list.html
+   04 Adding a sitemap to the site
+      ch03/04/mysite/settings_01.py
+      Chapter03/mysite/blog/sitemaps.py
+      Chapter03/mysite/mysite/urls.py
+   05 Creating feeds for blog posts
+      Chapter03/mysite/blog/feeds.py
+      Chapter03/mysite/blog/templates/blog/base.html
+   06 Adding full-text search to the blog
+      01 Installing PostgreSQL
+      02 Creating a PostgreSQL database
+      03 Dumping the existing data
+      04 Switching the database in the project
+         ch03/06.04/mysite/settings_01.py
+      05 Loading the data into the new database
+      06 Simple search lookups
+         Chapter03/mysite/mysite/settings.py
+      07 Searching against multiple fields
+      08 Building a search view
+         Chapter03/mysite/blog/forms.py
+         ch03/06.08/blog/views_01.py
+         Chapter03/mysite/blog/templates/blog/post/search.html
+         Chapter03/mysite/blog/urls.py
+      09 Stemming and ranking results
+         ch03/06.09/blog/views_01.py
+      10 Stemming and removing stop words in different languages
+      11 Weighting queries
+         ch03/06.11/blog/views_01.py
+      12 Searching with trigram similarity
+         Chapter03/mysite/blog/views.py
+   07 Additional resources
+   08 Summary
