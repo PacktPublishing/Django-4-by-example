@@ -74,3 +74,30 @@
          Chapter04/bookmarks/account/forms.py
    05 Additional resources
    06 Summary
+05 Implementing Social Authentication
+   01 Adding social authentication to your site
+      ch05/01/bookmarks/settings_01.py
+      Chapter05/bookmarks/bookmarks/urls.py
+      ch05/01/bookmarks/settings_02.py
+      01 Running the development server through HTTPS
+         ch05/01.01/bookmarks/settings_01.py
+      02 Authentication using Facebook
+         ch05/01.02/bookmarks/settings_01.py
+         ch05/01.02/bookmarks/settings_02.py
+         ch05/01.02/account/templates/registration/login_01.html
+      03 Authentication using Twitter
+         ch05/01.03/bookmarks/settings_01.py
+         ch05/01.03/bookmarks/settings_02.py
+         ch05/01.03/account/templates/registration/login_01.html
+      04 Authentication using Google
+         ch05/01.04/bookmarks/settings_01.py
+         ch05/01.04/bookmarks/settings_02.py
+         Chapter05/bookmarks/account/templates/registration/login.html
+      05 Creating a profile for users that register with social authentication
+         ch05/01.05/bookmarks/settings_01.py
+         Chapter05/bookmarks/account/authentication.py
+         Chapter05/bookmarks/bookmarks/settings.py
+   02 Additional resources
+   03 Summary
+06 Sharing Content on Your Website
+   01 Creating an image bookmarking website
