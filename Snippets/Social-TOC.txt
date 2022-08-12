@@ -1,20 +1,76 @@
 04 Building a Social Website
    01 Creating a social website project
       01 Starting the social website project
-          ch04/01.01/bookmarks/settings_00.py
-          ch04/01.01/bookmarks/urls_00.py
-          ch04/01.01/account/admin_00.py
-          ch04/01.01/account/models_00.py
-          ch04/01.01/account/views_00.py
-          ch04/01.01/bookmarks/settings_01.py
+         ch04/01.01/bookmarks/settings_00.py
+         ch04/01.01/bookmarks/urls_00.py
+         ch04/01.01/account/admin_00.py
+         ch04/01.01/account/models_00.py
+         ch04/01.01/account/views_00.py
+         ch04/01.01/bookmarks/settings_01.py
    02 Using the Django authentication framework
       01 Creating a login view
-          ch04/02.01/account/forms_01.py
-          ch04/02.01/account/views_01.py
-          ch04/02.01/account/urls_01.py
-          ch04/02.01/bookmarks/urls_01.py
-          Chapter04/bookmarks/account/static/css/base.css
-          ch04/02.01/account/templates/base_01.html
-          Chapter04/bookmarks/account/templates/account/login.html
+         ch04/02.01/account/forms_01.py
+         ch04/02.01/account/views_01.py
+         ch04/02.01/account/urls_01.py
+         ch04/02.01/bookmarks/urls_01.py
+         Chapter04/bookmarks/account/static/css/base.css
+         ch04/02.01/account/templates/base_01.html
+         Chapter04/bookmarks/account/templates/account/login.html
       02 Using Django authentication views
       03 Login and logout views
+         ch04/02.03/account/urls_01.py
+         ch04/02.03/account/templates/registration/login_01.html
+         Chapter04/bookmarks/account/templates/registration/logged_out.html
+         ch04/02.03/account/views_01.py
+         ch04/02.03/account/templates/account/dashboard_01.html
+         ch04/02.03/account/urls_02.py
+         ch04/02.03/bookmarks/settings_01.py
+         ch04/02.03/account/templates/base_01.html
+      04 Change password views
+         ch04/02.04/account/urls_01.py
+         Chapter04/bookmarks/account/templates/registration/password_change_form.html
+         Chapter04/bookmarks/account/templates/registration/password_change_form.html
+      05 Reset password views
+         ch04/02.05/account/urls_01.py
+         Chapter04/bookmarks/account/templates/registration/password_reset_form.html
+         Chapter04/bookmarks/account/templates/registration/password_reset_email.html
+         Chapter04/bookmarks/account/templates/registration/password_reset_done.html
+         Chapter04/bookmarks/account/templates/registration/password_reset_confirm.html
+         Chapter04/bookmarks/account/templates/registration/password_reset_complete.html
+         ch04/02.05/account/templates/registration/login_01.html
+         ch04/02.05/bookmarks/settings_01.py
+         ch04/02.05/account/urls_02.py
+   03 User registration and user profiles
+      01 User registration
+         ch04/03.01/account/forms_01.py
+         ch04/03.01/account/forms_02.py
+         ch04/03.01/account/views_01.py
+         ch04/03.01/account/urls_01.py
+         Chapter04/bookmarks/account/templates/account/register.html
+         Chapter04/bookmarks/account/templates/account/register_done.html
+         Chapter04/bookmarks/account/templates/registration/login.html
+      02 Extending the user model
+         Chapter04/bookmarks/account/models.py
+      03 Installing Pillow and serving media files
+         ch04/03.03/bookmarks/settings_01.py
+         Chapter04/bookmarks/bookmarks/urls.py
+         Chapter04/bookmarks/account/admin.py
+      04 Creating migrations for the profile model
+         ch04/03.04/account/forms_01.py
+         ch04/03.04/account/views_01.py
+         ch04/03.04/account/views_02.py
+         Chapter04/bookmarks/account/urls.py
+         Chapter04/bookmarks/account/templates/account/edit.html
+         Chapter04/bookmarks/account/dashboard.html
+         01 Using a custom user model
+      05 Using the messages framework
+         Chapter04/bookmarks/account/templates/base.html
+         Chapter04/bookmarks/account/views.py
+   04 Building a custom authentication backend
+      Chapter04/bookmarks/account/authentication.py
+      Chapter04/bookmarks/bookmarks/settings.py
+      01 Preventing users from using an existing email
+         ch04/04.01/account/forms_01.py
+         Chapter04/bookmarks/account/forms.py
+   05 Additional resources
+   06 Summary
