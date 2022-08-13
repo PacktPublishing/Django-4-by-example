@@ -23,6 +23,7 @@ def payment_process(request):
         # Stripe checkout session data
         session_data = {
             'mode': 'payment',
+            'client_reference_id': order.id,
             'success_url': success_url,
             'cancel_url': cancel_url,
             'line_items': []
@@ -30,18 +31,18 @@ def payment_process(request):
         # add order items to the Stripe checkout session
         for item in order.items.all():
             session_data['line_items'].append({
-                'name': item.product.name,
-                'amount': int(item.price * Decimal('100')),
-                'currency': 'usd',
+                'price_data': {
+                    'unit_amount': int(item.price * Decimal('100')),
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': item.product.name,
+                    },
+                },
                 'quantity': item.quantity,
             })
 
         # create Stripe checkout session
         session = stripe.checkout.Session.create(**session_data)
-
-        # link checkout session with order
-        order.stripe_id = session.payment_intent
-        order.save()
 
         # redirect to Stripe payment form
         return redirect(session.url, code=303)
