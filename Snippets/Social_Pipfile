@@ -9,6 +9,10 @@ Django = "~=4.0"
 sqlparse = "==0.4.2"
 tzdata = "==2022.1"
 Pillow = "==9.2.0"
+social-auth-app-django = {editable = true, ref = "20fabcd7bd9a8a41910bc5c8ed1bd6ef2263b328", git = "https://github.com/python-social-auth/social-app-django.git"}
+django-extensions = "==3.1.5"
+werkzeug = "==2.0.3"
+pyopenssl = "==22.0.0"
 
 [dev-packages]
 pip = "*"
