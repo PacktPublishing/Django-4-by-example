@@ -1,7 +1,7 @@
-var siteUrl = '//127.0.0.1:8000/';
-var styleUrl = siteUrl + 'static/css/bookmarklet.css';
-var minWidth = 250;
-var minHeight = 250;
+const siteUrl = '//127.0.0.1:8000/';
+const styleUrl = siteUrl + 'static/css/bookmarklet.css';
+const minWidth = 250;
+const minHeight = 250;
 
 // load CSS
 var head = document.getElementsByTagName('head')[0];  // Get HTML head element
