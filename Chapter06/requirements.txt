@@ -7,4 +7,4 @@ git+https://github.com/django-extensions/django-extensions.git@25a41d8a3ecb24c00
 werkzeug==2.2.2
 pyOpenSSL==22.0.0
 requests==2.28.1
-easy-thumbnails==2.8.1
+easy-thumbnails==2.8.3
