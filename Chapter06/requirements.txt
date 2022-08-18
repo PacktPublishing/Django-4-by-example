@@ -1,10 +1,10 @@
 asgiref==3.5.2
-Django~=4.0
+Django~=4.1.0
 Pillow==9.2.0
 sqlparse==0.4.2
 social-auth-app-django==5.0.0
-django-extensions==3.2.0
-werkzeug==2.0.3
+git+https://github.com/django-extensions/django-extensions.git@25a41d8a3ecb24c009c5f4cac6010a091a3c91c8
+werkzeug==2.2.2
 pyOpenSSL==22.0.0
 requests==2.28.1
 easy-thumbnails==2.8.1

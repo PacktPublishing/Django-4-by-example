@@ -1,11 +1,11 @@
 asgiref==3.5.2
-Django~=4.0
+Django~=4.1.0
 sqlparse==0.4.2
 Pillow==9.2.0
-flower==1.1.0
+flower==1.2.0
 celery==5.2.7
-stripe==3.5.0
-WeasyPrint==56.0
+stripe==4.0.2
+WeasyPrint==56.1
 redis==4.3.4
 django-rosetta==0.9.8
 django-parler==2.3

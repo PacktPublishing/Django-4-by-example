@@ -7,7 +7,7 @@ services:
       - ./data/cache:/data
 
   db:
-    image: postgres:14.4
+    image: postgres:14.5
     restart: always
     volumes:
       - ./data/db:/var/lib/postgresql/data
@@ -51,7 +51,7 @@ services:
       - cache
 
   nginx:
-    image: nginx:1.23.0
+    image: nginx:1.23.1
     restart: always
     volumes:
       - ./config/nginx:/etc/nginx/templates
