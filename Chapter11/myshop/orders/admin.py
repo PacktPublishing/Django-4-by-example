@@ -14,7 +14,7 @@ def export_to_csv(modeladmin, request, queryset):
     response['Content-Disposition'] = content_disposition
     writer = csv.writer(response)
     fields = [field for field in opts.get_fields() if not \
-    field.many_to_many and not field.one_to_many]
+              field.many_to_many and not field.one_to_many]
     # Write a first row with header information
     writer.writerow([field.verbose_name for field in fields])
     # Write data rows
