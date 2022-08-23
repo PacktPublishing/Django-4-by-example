@@ -26,4 +26,4 @@ def create_profile(backend, user, *args, **kwargs):
     """
     Create user profile for social authentication
     """
-    profile = Profile.objects.get_or_create(user=user)
+    Profile.objects.get_or_create(user=user)
