@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Images bookmarked{% endblock %}
+
+{% block content %}
+  <h1>Images bookmarked</h1>
+  <div id="image-list">
+    {% include "images/image/list_images.html" %}
+  </div>
+{% endblock %}

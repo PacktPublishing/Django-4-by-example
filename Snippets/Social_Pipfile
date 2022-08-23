@@ -13,6 +13,8 @@ social-auth-app-django = {editable = true, ref = "20fabcd7bd9a8a41910bc5c8ed1bd6
 django-extensions = "==3.1.5"
 werkzeug = "==2.0.3"
 pyopenssl = "==22.0.0"
+requests = "==2.28.1"
+easy-thumbnails = "==2.8.1"
 
 [dev-packages]
 pip = "*"

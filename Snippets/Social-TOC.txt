@@ -101,3 +101,65 @@
    03 Summary
 06 Sharing Content on Your Website
    01 Creating an image bookmarking website
+      ch06/01/images/admin_00.py
+      ch06/01/images/models_00.py
+      ch06/01/images/views_00.py
+      ch06/01/bookmarks/settings_01.py
+      01 Building the image model
+         ch06/01.01/images/models_01.py
+         ch06/01.01/images/models_02.py
+      02 Creating many-to-many relationships
+         ch06/01.02/images/models_01.py
+      03 Registering the image model in the administration site
+         Chapter06/bookmarks/images/admin.py
+   02 Posting content from other websites
+      ch06/02/images/forms_01.py
+      01 Cleaning form fields
+         ch06/02.01/images/forms_01.py
+      02 Installing the Requests library
+         Chapter06/bookmarks/images/forms.py
+      03 Overriding the save() method of a ModelForm
+         ch06/02.03/images/views_01.py
+         ch06/02.03/images/urls_01.py
+         Chapter06/bookmarks/bookmarks/urls.py
+         Chapter06/bookmarks/images/templates/images/image/create.html
+      04 Building a bookmarklet with JavaScript
+         Chapter06/bookmarks/images/templates/images/bookmarklet_launcher.js
+         Chapter06/bookmarks/account/templates/account/dashboard.html
+         ch06/02.04/static/js/bookmarklet_01.js
+         ch06/02.04/static/js/bookmarklet_02.js
+         ch06/02.04/static/js/bookmarklet_03.js
+         ch06/02.04/static/js/bookmarklet_04.js
+         ch06/02.04/static/js/bookmarklet_05.js
+         Chapter06/bookmarks/static/js/bookmarklet.js
+   03 Creating a detail view for images
+      ch06/03/images/views_01.py
+      ch06/03/images/urls_01.py
+      Chapter06/bookmarks/images/models.py
+      ch06/03/images/templates/images/image/detail_01.html
+   04 Creating image thumbnails using easy-thumbnails
+      Chapter06/bookmarks/bookmarks/settings.py
+      ch06/04/images/templates/images/image/detail_01.html
+   05 Adding asynchronous actions with JavaScript
+      ch06/05/images/views_01.py
+      ch06/05/images/urls_01.py
+      01 Loading JavaScript on DOM ready
+         ch06/05.01/account/templates/base_01.html
+      02 Cross-site request forgery for HTTP requests in JavaScript
+         ch06/05.02/account/templates/base_01.html
+      03 Performing HTTP requests with JavaScript
+         ch06/05.03/images/templates/images/image/detail_01.html
+         ch06/05.03/images/templates/images/image/detail_02.html
+         ch06/05.03/images/templates/images/image/detail_03.html
+         Chapter06/bookmarks/images/templates/images/image/detail.html
+   06 Adding infinite scroll pagination to the image list
+      Chapter06/bookmarks/images/views.py
+      Chapter06/bookmarks/images/urls.py
+      Chapter06/bookmarks/images/templates/images/image/list_images.html
+      ch06/06/images/templates/images/image/list_01.html
+      Chapter06/bookmarks/images/templates/images/image/list.html
+      Chapter06/bookmarks/account/templates/base.html
+   07 Additional resources
+   08 Summary
+07 Tracking User Actions
+
