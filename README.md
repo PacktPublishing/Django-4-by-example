@@ -139,3 +139,7 @@ While the 4th edition of the book is translated to other languages, you can find
 - Serbo-Croatian-Bosnian: [Django 3 kroz primere, prevod III izdanja](https://knjige.kombib.rs/django-3-kroz-primere-prevod-iii-izdanja)
 - Spanish: [Django 2](https://www.amazon.es/Django-2-Antonio-Mel%C3%A9/dp/8426727484)
 - Russian: [Django 2 в примерах](https://dmkpress.com/catalog/computer/programming/python/978-5-97060-746-6/)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781801813051">https://packt.link/free-ebook/9781801813051 </a> </p>
