@@ -157,3 +157,4 @@ If you have already purchased a print or Kindle version of this book, you can ge
 
 ## Errata
 - Chapter 1, in *Figure 1.4* the `body` field should be `TextField` instead of `ForeignKey`.
+- Chapter 16, page 647 line `ASGI_APPLICATION = 'educa.routing.application'` should be `ASGI_APPLICATION = 'educa.asgi.application'`.
