@@ -8,7 +8,7 @@ def subdomain_course_middleware(get_response):
     """
     def middleware(request):
         host_parts = request.get_host().split('.')
-        if len(host_parts) > 2 and host_parts[0] != 'www':
+        if len(host_parts) > 2 and host_parts[0].lower() != 'www':
             # get course for the given subdomain
             course = get_object_or_404(Course, slug=host_parts[0])
             course_url = reverse('course_detail',
