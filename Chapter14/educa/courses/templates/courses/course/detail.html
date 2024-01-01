@@ -12,10 +12,12 @@
     <div class="module">
       <h2>Overview</h2>
       <p>
+        {% if subject %}
         <a href="{% url "course_list_subject" subject.slug %}">
         {{ subject.title }}</a>.
         {{ object.modules.count }} modules.
         Instructor: {{ object.owner.get_full_name }}
+        {% endif %}
       </p>
       {{ object.overview|linebreaks }}
       {% if request.user.is_authenticated %}
